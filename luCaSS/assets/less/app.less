@@ -1,0 +1,78 @@
+@app-color-1: #5E8A9D;
+@app-color-2: #CACACA;
+
+@app-color-1-hover : rgb(83, 121, 137);
+
+@section-margins: 40px;
+
+body {
+	font-family: 'Open Sans';
+	font-size: 16px;
+	line-height: 22px;
+}
+
+hr + footer {
+	margin-top: @section-margins;
+}
+header + hr,
+section + hr {
+	height: @section-margins;
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.header-blockquote {
+	padding: 10px;
+	background: @app-color-1;
+	color: white;
+}
+
+.btn-download {
+	background-color: @app-color-1;
+	color: white;
+	display: inline-block;
+	padding: 20px 25px;
+	font-size: 30px;
+	text-transform: uppercase;
+	span {
+		font-size: 14px;
+		position: relative;
+		left: 1px;
+	}
+	&:hover {
+		background-color: @app-color-1-hover;
+		color: white;
+	}
+}
+
+#app-header {
+	margin: 20px 0 40px 0;
+}
+
+#app-logo {
+	color: @app-color-2;
+	h1 {
+		font-size: 104px;
+		line-height: 100px;
+	}
+	&:hover span {
+		color: @app-color-1;
+	}
+}
+
+.notes-release {
+	li {
+		margin-bottom: 4px;
+	}
+}
+
+#container-download {
+	height: 125px;
+	@padding-top: (125px - 90px) / 2;
+	padding: @padding-top 0;
+	float: right;
+}

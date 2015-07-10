@@ -1,0 +1,12 @@
+.grid-make(@i, @grid-type) when (@i > 0) {
+    @grid-value: @i;
+    .col-@{grid-type}-@{grid-value} {
+        width: percentage((@i / 12));;
+    }
+    .grid-make((@i - 1),  @grid-type);
+}
+
+@xs: 480px;
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;

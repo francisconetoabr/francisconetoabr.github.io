@@ -1,0 +1,79 @@
+// Grid based on: Bootstrap v3.3.5 (http://getbootstrap.com)
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+[class^="col-xs-"],
+[class*="col-xs-"],
+[class^="col-sm-"],
+[class*="col-sm-"],
+[class^="col-md-"],
+[class*="col-md-"],
+[class^="col-lg-"],
+[class*="col-lg-"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.col-center {
+    margin: 0 auto;
+    float: none;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after,
+.container:after,
+.row:after {
+    clear: both;
+}
+
+.grid-make(12, xs);
+
+@media (min-width: @sm) {
+    .grid-make(12, sm);
+}
+
+@media (min-width: @md) {
+    .grid-make(12, md);
+}
+
+@media (min-width: @lg) {
+    .grid-make(12, lg);
+}
+
+.absolute-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    [class^="col-xs-"],
+    [class*="col-xs-"],
+    [class^="col-sm-"],
+    [class*="col-sm-"],
+    [class^="col-md-"],
+    [class*="col-md-"],
+    [class^="col-lg-"],
+    [class*="col-lg-"] {
+        height: 100% !important;
+    }
+}
